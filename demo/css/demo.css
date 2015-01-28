@@ -8,10 +8,14 @@ body {
 p {
     margin: 0 0 1em 0;
 }
-#view {
+#view, #content {
     margin:.5em 0 .25em 0;
     border:1px solid #ccc;
     background: #fff;
+}
+#content {
+    height: 400px;
+    width: 600px;
 }
 .container {
     width: 600px;
