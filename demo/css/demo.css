@@ -16,6 +16,9 @@ p {
 #content {
     height: 400px;
     width: 600px;
+    overflow-y: scroll;
+    outline: none;
+    padding: 20px;
 }
 .container {
     width: 600px;

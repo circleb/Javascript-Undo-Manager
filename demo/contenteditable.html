@@ -4,6 +4,10 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
         <title>UndoManager demo</title>
         <link href="css/demo.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://nytimes.github.io/ice/demo/demo.css" type="text/css" media="screen">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+        <script type='text/javascript' src='http://nytimes.github.io/ice/demo/lib/ice.min.js'></script>
         
     </head>
     <body>
@@ -12,14 +16,18 @@
                 <div class="commands">
                     <button type="button" class="btn btn-primary" id="btnUndo" disabled="disabled">Undo</button>
                     <button type="button" class="btn btn-primary" id="btnRedo" disabled="disabled">Redo</button>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" id="btnBold" class="btn btn-default"><span class="glyphicon glyphicon-bold" aria-hidden="true"></span></button>
+                        <button type="button" id="btnItalic" class="btn btn-default"><span class="glyphicon glyphicon-italic" aria-hidden="true"></span></button>
+                    </div>
                     <button type="button" class="btn btn-default pull-right" id="btnClear">Clear memory</button>
                 </div>
                 <div id="content" contenteditable="true">
+                    This is a test!
                 </div>
             </div>
         </div>
         
-        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="../js/undomanager.js"></script>
         <script type="text/javascript" src="js/contenteditable.js"></script>
     </body>

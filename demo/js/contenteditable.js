@@ -37,6 +37,8 @@ window.onload = function () {
 
     btnUndo = document.getElementById('btnUndo');
     btnRedo = document.getElementById('btnRedo');
+    btnBold = document.getElementById('btnBold');
+    btnItalic = document.getElementById('btnItalic');
     btnClear = document.getElementById('btnClear');
 
     function updateUI() {
@@ -51,6 +53,22 @@ window.onload = function () {
     };
     btnRedo.onclick = function () {
         undoManager.redo();
+        updateUI();
+    };
+    btnBold.onclick = function () {
+        var text = $("#content"), 
+            startValue = text.html();
+        document.execCommand("bold", false);
+        var newValue = text.html();
+        changeText(startValue, newValue, text);
+        updateUI();
+    };
+    btnItalic.onclick = function () {
+        var text = $("#content"), 
+            startValue = text.html();
+        document.execCommand("italic", false);
+        var newValue = text.html();
+        changeText(startValue, newValue, text);
         updateUI();
     };
     btnClear.onclick = function () {
